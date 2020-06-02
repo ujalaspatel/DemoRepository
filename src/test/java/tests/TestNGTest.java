@@ -37,7 +37,13 @@ public class TestNGTest {
  softAssert.assertAll();
   }
   
- 
+  @Test(priority=4, groups="smoke")
+  public void test6() {
+ System.out.println("test6");
+ boolean b=true;
+ softAssert.assertEquals(true, b);
+ softAssert.assertAll();
+  }
   
   @BeforeMethod
   public void beforeMethod() {
